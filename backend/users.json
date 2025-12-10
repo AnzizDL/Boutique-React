@@ -1,0 +1,9 @@
+[
+  {
+    "id": 1,
+    "email": "demo@boutique.test",
+    "password": "$2b$10$nsGNiDxHwKaDPybZ.dcuSesLPcZkqsDH1aGRNAP9IpsC44bR2jAfC",
+    "name": "Visiteur",
+    "cart": []
+  }
+]
