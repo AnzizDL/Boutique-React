@@ -44,7 +44,8 @@ function Login() {
       <form onSubmit={handleSubmit}>
         <div style={{ marginBottom: "10px" }}>
           <label>
-            Email<br />
+            Email
+            <br />
             <input
               type="email"
               value={email}
@@ -56,7 +57,8 @@ function Login() {
 
         <div style={{ marginBottom: "10px" }}>
           <label>
-            Mot de passe<br />
+            Mot de passe
+            <br />
             <input
               type="password"
               value={password}
