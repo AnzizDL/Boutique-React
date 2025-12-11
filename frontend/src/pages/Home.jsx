@@ -13,8 +13,8 @@ function Home() {
   }, []);
 
   return (
-    <div style={{ padding: "40px", maxWidth: "1200px", margin: "0 auto" }}>
-      <h1 style={{ marginBottom: "30px", fontSize: "2rem" }}>Nos Produits</h1>
+    <div style={{ padding: "40px", maxWidth: "1200px", margin: "0 auto", background: "#0a0a0a", minHeight: "100vh" }}>
+      <h1 style={{ marginBottom: "30px", fontSize: "2.5rem", color: "#ff0000", textShadow: "0 0 10px rgba(255,0,0,0.5)" }}>Death Note Shop</h1>
 
       {error && <p style={{ color: "red" }}>Erreur : {error}</p>}
 
@@ -22,8 +22,8 @@ function Home() {
 
       <div style={{
         display: "grid",
-        gridTemplateColumns: "repeat(auto-fill, minmax(250px, 1fr))",
-        gap: "20px",
+        gridTemplateColumns: "repeat(auto-fill, minmax(280px, 1fr))",
+        gap: "30px",
         marginTop: "20px"
       }}>
         {products.map((p) => (
@@ -34,28 +34,45 @@ function Home() {
           >
             <div
               style={{
-                border: "1px solid #ddd",
-                padding: "20px",
-                borderRadius: "12px",
+                border: "2px solid #8b0000",
+                borderRadius: "15px",
                 transition: "all 0.3s ease",
-                boxShadow: "0 2px 4px rgba(0,0,0,0.1)",
+                boxShadow: "0 4px 8px rgba(139,0,0,0.2)",
                 height: "100%",
                 display: "flex",
                 flexDirection: "column",
-                justifyContent: "space-between",
-                cursor: "pointer"
+                overflow: "hidden",
+                cursor: "pointer",
+                background: "linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%)",
+                color: "#fff"
               }}
               onMouseOver={(e) => {
-                e.currentTarget.style.transform = "translateY(-5px)";
-                e.currentTarget.style.boxShadow = "0 4px 12px rgba(0,0,0,0.15)";
+                e.currentTarget.style.transform = "translateY(-8px)";
+                e.currentTarget.style.boxShadow = "0 8px 20px rgba(139,0,0,0.4)";
+                e.currentTarget.style.borderColor = "#ff0000";
               }}
               onMouseOut={(e) => {
                 e.currentTarget.style.transform = "translateY(0)";
-                e.currentTarget.style.boxShadow = "0 2px 4px rgba(0,0,0,0.1)";
+                e.currentTarget.style.boxShadow = "0 4px 8px rgba(139,0,0,0.2)";
+                e.currentTarget.style.borderColor = "#8b0000";
               }}
             >
-              <h3 style={{ marginBottom: "10px", fontSize: "1.3rem" }}>{p.name}</h3>
-              <strong style={{ fontSize: "1.5rem", color: "#2563eb" }}>{p.price} €</strong>
+              {p.image && (
+                <img 
+                  src={p.image} 
+                  alt={p.name}
+                  style={{
+                    width: "100%",
+                    height: "200px",
+                    objectFit: "cover",
+                    borderBottom: "2px solid #8b0000"
+                  }}
+                />
+              )}
+              <div style={{ padding: "20px" }}>
+                <h3 style={{ marginBottom: "10px", fontSize: "1.3rem", color: "#ff6b6b" }}>{p.name}</h3>
+                <strong style={{ fontSize: "1.5rem", color: "#ff0000" }}>{p.price.toLocaleString()} €</strong>
+              </div>
             </div>
           </Link>
         ))}

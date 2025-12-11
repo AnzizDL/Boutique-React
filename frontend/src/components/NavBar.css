@@ -4,14 +4,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  background-color: #111;
+  padding: 15px 30px;
+  background: linear-gradient(135deg, #1a0000 0%, #000000 100%);
   color: #fff;
   position: sticky;
   top: 0;
   z-index: 10;
   margin: 0;
   box-sizing: border-box;
+  border-bottom: 2px solid #8b0000;
+  box-shadow: 0 4px 10px rgba(255,0,0,0.3);
 }
 
 .navbar-left,
@@ -39,15 +41,30 @@
 }
 
 .navbar a {
-  color: white;
-  margin-right: 15px;
+  color: #ffaaaa;
+  margin-right: 20px;
   text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.navbar a:hover {
+  color: #ff0000;
+  text-shadow: 0 0 8px rgba(255,0,0,0.6);
 }
 
 .navbar button {
-  background: #555;
+  background: linear-gradient(135deg, #8b0000 0%, #ff0000 100%);
   color: white;
-  border: none;
-  padding: 5px 10px;
+  border: 2px solid #ff0000;
+  padding: 8px 16px;
   cursor: pointer;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.navbar button:hover {
+  background: linear-gradient(135deg, #ff0000 0%, #ff4444 100%);
+  box-shadow: 0 0 10px rgba(255,0,0,0.6);
 }

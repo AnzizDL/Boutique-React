@@ -26,8 +26,10 @@ function NavBar() {
   return (
     <nav className="navbar">
       <div className="navbar-left">
-        <Link to="/">Boutique</Link>
-        <Link to="/cart">Panier</Link>
+        <Link to="/">Death Note Shop</Link>
+        <Link to="/about">À Propos</Link>
+        <Link to="/contact">Contact</Link>
+        <Link to="/cart">🛒 Panier</Link>
       </div>
 
       <div className="navbar-right">

@@ -7,10 +7,9 @@
     "cart": [
       {
         "id": 2,
-        "name": "Casque Wave",
+        "name": "Figurine Ryuk",
         "price": 89.9,
-        "description": "Casque audio haute qualité",
-        "image": "/casque.jpg"
+        "description": "Figurine collector du Shinigami amateur de pommes. Inclus 3 pommes miniatures."
       }
     ]
   }

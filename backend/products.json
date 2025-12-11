@@ -1,14 +1,58 @@
 [
   {
     "id": 1,
-    "name": "Sneakers Alpha",
-    "price": 59.99,
-    "description": "Chaussures de sport confortables"
+    "name": "Death Note Original",
+    "price": 1000000.00,
+    "description": "Le cahier de la mort authentique. Écrivez un nom et... vous connaissez les règles.",
+    "image": "https://images.unsplash.com/photo-1516414447565-b14be0adf13e?w=400&h=400&fit=crop"
   },
   {
     "id": 2,
-    "name": "Casque Wave",
-    "price": 89.9,
-    "description": "Casque audio haute qualité"
+    "name": "Figurine Ryuk",
+    "price": 89.90,
+    "description": "Figurine collector du Shinigami amateur de pommes. Inclus 3 pommes miniatures.",
+    "image": "https://images.unsplash.com/photo-1601814933824-fd0b574dd592?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 3,
+    "name": "Pommes pour Ryuk",
+    "price": 12.99,
+    "description": "Pack de 6 pommes rouges, les préférées de Ryuk. Fraîcheur garantie du monde des Shinigami.",
+    "image": "https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 4,
+    "name": "Masque L",
+    "price": 24.99,
+    "description": "Le masque iconique de L. Parfait pour résoudre des enquêtes tout en restant anonyme.",
+    "image": "https://images.unsplash.com/photo-1608889476561-6242cfdbf622?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 5,
+    "name": "Montre Light Yagami",
+    "price": 149.90,
+    "description": "Montre élégante style Kira. Compartiment secret non inclus (pour des raisons légales).",
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 6,
+    "name": "Manga Death Note - Intégrale",
+    "price": 79.99,
+    "description": "Les 12 tomes en coffret collector. L'histoire complète de Light et L.",
+    "image": "https://images.unsplash.com/photo-1612178991541-e59d8b8e6b8d?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 7,
+    "name": "T-shirt 'I am Kira'",
+    "price": 29.99,
+    "description": "T-shirt noir avec le logo Kira. Disponible en plusieurs tailles. Justice absolue garantie.",
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop"
+  },
+  {
+    "id": 8,
+    "name": "Poster L vs Light",
+    "price": 19.99,
+    "description": "Poster haute qualité 60x90cm. Le duel épique entre les deux génies.",
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e35ca?w=400&h=400&fit=crop"
   }
 ]
