@@ -1,13 +1,26 @@
-import { Link, useNavigate } from "react-router-dom";
+import { Link, useNavigate, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./NavBar.css";
 
 function NavBar() {
   const navigate = useNavigate();
-  const user = JSON.parse(localStorage.getItem("user") || "null");
+  const location = useLocation();
+
+  const [user, setUser] = useState(
+    JSON.parse(localStorage.getItem("user") || "null")
+  );
+
+  // 🔄 Se met à jour à chaque changement de page
+  useEffect(() => {
+    const storedUser = JSON.parse(localStorage.getItem("user") || "null");
+    setUser(storedUser);
+  }, [location]);
 
   function handleLogout() {
     localStorage.removeItem("user");
-    navigate("/");
+    localStorage.removeItem("cart");
+    setUser(null);
+    navigate("/login");
   }
 
   return (
@@ -20,7 +33,9 @@ function NavBar() {
       <div className="navbar-right">
         {user ? (
           <>
-            <span style={{ marginRight: "10px" }}>Bonjour, {user.name}</span>
+            <span style={{ marginRight: "10px" }}>
+              Bonjour, {user.name}
+            </span>
             <button onClick={handleLogout}>Se déconnecter</button>
           </>
         ) : (

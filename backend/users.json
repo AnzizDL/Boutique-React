@@ -4,6 +4,14 @@
     "email": "demo@boutique.test",
     "password": "$2b$10$nsGNiDxHwKaDPybZ.dcuSesLPcZkqsDH1aGRNAP9IpsC44bR2jAfC",
     "name": "Visiteur",
-    "cart": []
+    "cart": [
+      {
+        "id": 2,
+        "name": "Casque Wave",
+        "price": 89.9,
+        "description": "Casque audio haute qualité",
+        "image": "/casque.jpg"
+      }
+    ]
   }
 ]

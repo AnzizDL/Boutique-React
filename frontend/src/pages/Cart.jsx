@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./Cart.css";
 
 function Cart() {
   const [cart, setCart] = useState([]);
+  const location = useLocation();
 
   useEffect(() => {
     const stored = JSON.parse(localStorage.getItem("cart")) || [];
     setCart(stored);
-  }, []);
+  }, [location]);
 
   const total = cart.reduce((sum, item) => sum + item.price, 0);
 

@@ -27,6 +27,14 @@ function Login() {
       }
 
       localStorage.setItem("user", JSON.stringify(data.user));
+
+      // On récupère le panier du backend pour cet utilisateur
+      const cartRes = await fetch(`http://localhost:3001/cart/${data.user.id}`);
+      const cartData = await cartRes.json();
+
+      // On stocke le panier dans localStorage
+      localStorage.setItem("cart", JSON.stringify(cartData.cart));
+
       navigate("/");
     } catch (err) {
       setError(err.message);
