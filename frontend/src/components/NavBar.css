@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 30px;
+  padding: clamp(12px, 3vw, 15px) clamp(15px, 4vw, 30px);
   background: linear-gradient(135deg, #1a0000 0%, #000000 100%);
   color: #fff;
   position: sticky;
@@ -13,58 +13,85 @@
   margin: 0;
   box-sizing: border-box;
   border-bottom: 2px solid #8b0000;
-  box-shadow: 0 4px 10px rgba(255,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(255, 0, 0, 0.3);
+  overflow-x: auto;
 }
 
 .navbar-left,
 .navbar-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: clamp(12px, 3vw, 16px);
+  flex-wrap: wrap;
 }
 
 .navbar-logo {
   font-weight: 700;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2vw, 1.2rem);
   text-decoration: none;
-  color: #61dafb;
+  color: #ff6b6b;
+  white-space: nowrap;
 }
 
 .nav-link {
   text-decoration: none;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
+  white-space: nowrap;
 }
 
 .nav-link:hover {
   text-decoration: underline;
+  color: #ff6b6b;
 }
 
 .navbar a {
   color: #ffaaaa;
-  margin-right: 20px;
+  margin-right: clamp(12px, 2vw, 20px);
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  white-space: nowrap;
+  font-size: clamp(0.85rem, 1.5vw, 0.95rem);
 }
 
 .navbar a:hover {
   color: #ff0000;
-  text-shadow: 0 0 8px rgba(255,0,0,0.6);
+  text-shadow: 0 0 8px rgba(255, 0, 0, 0.6);
 }
 
 .navbar button {
   background: linear-gradient(135deg, #8b0000 0%, #ff0000 100%);
   color: white;
   border: 2px solid #ff0000;
-  padding: 8px 16px;
+  padding: clamp(6px, 1vw, 8px) clamp(12px, 2vw, 16px);
   cursor: pointer;
   border-radius: 8px;
   font-weight: bold;
   transition: all 0.3s ease;
+  font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+  white-space: nowrap;
 }
 
 .navbar button:hover {
   background: linear-gradient(135deg, #ff0000 0%, #ff4444 100%);
-  box-shadow: 0 0 10px rgba(255,0,0,0.6);
+  box-shadow: 0 0 10px rgba(255, 0, 0, 0.6);
+}
+
+/* Petit écran < 480px */
+@media (max-width: 480px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: clamp(8px, 2vw, 10px);
+  }
+
+  .navbar-left,
+  .navbar-right {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .navbar a {
+    margin-right: clamp(8px, 1vw, 12px);
+  }
 }

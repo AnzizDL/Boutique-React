@@ -1,22 +1,54 @@
 .cart-container {
-  padding: 20px;
+  padding: clamp(15px, 4vw, 20px);
   max-width: 500px;
   margin: auto;
+  box-sizing: border-box;
 }
 
 .cart-item {
-  border: 1px solid #ddd;
-  padding: 10px;
-  margin: 10px 0;
+  border: 1px solid #8b0000;
+  padding: clamp(10px, 2vw, 15px);
+  margin: clamp(8px, 2vw, 10px) 0;
   border-radius: 8px;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d0000 100%);
+  color: #fff;
+}
+
+.cart-item h3 {
+  font-size: clamp(1.1rem, 3vw, 1.3rem);
+  margin: 0 0 8px 0;
+  color: #ff6b6b;
+}
+
+.cart-item p {
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  margin: 0;
+  color: #ff0000;
+}
+
+.cart-container h1 {
+  font-size: clamp(1.8rem, 5vw, 2.5rem);
+  color: #ff6b6b;
+}
+
+.cart-container h2 {
+  font-size: clamp(1.3rem, 4vw, 1.8rem);
+  color: #ff0000;
 }
 
 .clear-btn {
-  background: red;
+  background: linear-gradient(135deg, #8b0000 0%, #ff0000 100%);
   color: white;
-  padding: 10px 15px;
-  border: none;
-  margin-top: 20px;
+  padding: clamp(10px, 2vw, 12px) clamp(15px, 3vw, 20px);
+  border: 2px solid #ff0000;
+  margin-top: clamp(15px, 3vw, 20px);
   border-radius: 8px;
   cursor: pointer;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  transition: all 0.3s ease;
+}
+
+.clear-btn:hover {
+  background: linear-gradient(135deg, #ff0000 0%, #ff4444 100%);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.6);
 }

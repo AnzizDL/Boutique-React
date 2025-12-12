@@ -44,46 +44,97 @@ function Login() {
   }
 
   return (
-    <div style={{ padding: "20px", maxWidth: "400px" }}>
-      <h1>Connexion</h1>
+    <div
+      style={{
+        padding: "clamp(15px, 4vw, 20px)",
+        maxWidth: "400px",
+        margin: "0 auto",
+        boxSizing: "border-box",
+      }}
+    >
+      <h1 style={{ fontSize: "clamp(1.8rem, 5vw, 2.5rem)", color: "#ff6b6b" }}>
+        Connexion
+      </h1>
 
-      {error && <p style={{ color: "red" }}>{error}</p>}
+      {error && (
+        <p
+          style={{ color: "#ff0000", fontSize: "clamp(0.95rem, 2vw, 1.05rem)" }}
+        >
+          {error}
+        </p>
+      )}
 
       <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: "10px" }}>
-          <label>
+        <div style={{ marginBottom: "clamp(12px, 3vw, 15px)" }}>
+          <label
+            style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "#fff" }}
+          >
             Email
             <br />
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              style={{ width: "100%" }}
+              style={{
+                width: "100%",
+                padding: "clamp(8px, 2vw, 10px)",
+                marginTop: "5px",
+                boxSizing: "border-box",
+                fontSize: "clamp(0.95rem, 2vw, 1rem)",
+              }}
             />
           </label>
         </div>
 
-        <div style={{ marginBottom: "10px" }}>
-          <label>
+        <div style={{ marginBottom: "clamp(12px, 3vw, 15px)" }}>
+          <label
+            style={{ fontSize: "clamp(1rem, 2vw, 1.1rem)", color: "#fff" }}
+          >
             Mot de passe
             <br />
             <input
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              style={{ width: "100%" }}
+              style={{
+                width: "100%",
+                padding: "clamp(8px, 2vw, 10px)",
+                marginTop: "5px",
+                boxSizing: "border-box",
+                fontSize: "clamp(0.95rem, 2vw, 1rem)",
+              }}
             />
           </label>
         </div>
 
-        <button type="submit" disabled={loading}>
+        <button
+          type="submit"
+          disabled={loading}
+          style={{
+            width: "100%",
+            padding: "clamp(10px, 2vw, 12px)",
+            fontSize: "clamp(1rem, 2vw, 1.1rem)",
+            background: "linear-gradient(135deg, #8b0000 0%, #ff0000 100%)",
+            color: "#fff",
+            border: "2px solid #ff0000",
+            borderRadius: "8px",
+            cursor: "pointer",
+            transition: "all 0.3s ease",
+          }}
+        >
           {loading ? "Connexion..." : "Se connecter"}
         </button>
       </form>
 
-      <p style={{ marginTop: "10px", fontSize: "0.9rem" }}>
+      <p
+        style={{
+          marginTop: "clamp(12px, 3vw, 15px)",
+          fontSize: "clamp(0.85rem, 2vw, 0.95rem)",
+          color: "#ddd",
+        }}
+      >
         Identifiants de test : <br />
-        <code>demo@boutique.test / secret</code>
+        <code style={{ color: "#ff0000" }}>demo@boutique.test / secret</code>
       </p>
     </div>
   );

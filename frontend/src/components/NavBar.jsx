@@ -35,9 +35,7 @@ function NavBar() {
       <div className="navbar-right">
         {user ? (
           <>
-            <span style={{ marginRight: "10px" }}>
-              Bonjour, {user.name}
-            </span>
+            <span style={{ marginRight: "10px" }}>Bonjour, {user.name}</span>
             <button onClick={handleLogout}>Se déconnecter</button>
           </>
         ) : (

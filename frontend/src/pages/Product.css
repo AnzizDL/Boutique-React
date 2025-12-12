@@ -1,19 +1,19 @@
 .product-card {
   border: 1px solid #ddd;
-  padding: 20px;
-  margin: 20px;
+  padding: clamp(15px, 4vw, 20px);
+  margin: clamp(15px, 4vw, 20px);
   border-radius: 10px;
-  max-width: 400px;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 .product-card button {
-  margin-top: 20px;
-  padding: 12px 20px;
+  margin-top: clamp(15px, 3vw, 20px);
+  padding: clamp(10px, 2vw, 12px) clamp(15px, 3vw, 20px);
   border-radius: 8px;
   border: none;
-  background: #4F8;
+  background: #4f8;
   cursor: pointer;
-  font-size: 18px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
   font-weight: bold;
 }
-  

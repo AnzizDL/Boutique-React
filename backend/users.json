@@ -9,7 +9,15 @@
         "id": 2,
         "name": "Figurine Ryuk",
         "price": 89.9,
-        "description": "Figurine collector du Shinigami amateur de pommes. Inclus 3 pommes miniatures."
+        "description": "Figurine collector du Shinigami amateur de pommes. Inclus 3 pommes miniatures.",
+        "image": "https://picsum.photos/400/400?random=2"
+      },
+      {
+        "id": 2,
+        "name": "Figurine Ryuk",
+        "price": 89.9,
+        "description": "Figurine collector du Shinigami amateur de pommes. Inclus 3 pommes miniatures.",
+        "image": "https://picsum.photos/400/400?random=2"
       }
     ]
   }
